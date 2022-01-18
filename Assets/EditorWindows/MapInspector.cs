@@ -13,6 +13,20 @@ using Debug = UnityEngine.Debug;
  * 10000 times -> 1 min 45.64 s
  */
 
+/*
+ * - Is it acceptable to use reflection in runtime of the games?
+ * Reflexion can be usefull for extensibility, debugging and testing tools
+ * but the performences cost is to expensive for a game runtime
+ * - Would you use it at runtime?
+ * With this kind of usage ; never!
+ * - Why would / would’t you use it in runtime?
+ * The performence overall is to expensive for a game.
+ * Randering, inputs reading and gameplay loop would loose to much.
+ * But I could imagine using it at program initialization phase, or for code generation,
+ * with, for exemple, usage of attributes.
+ */
+
+
 namespace EditorWindows
 {
     public class MapInspector : EditorWindow

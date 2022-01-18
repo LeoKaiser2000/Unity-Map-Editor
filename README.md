@@ -51,6 +51,24 @@ The Map Inspector is a map visualizer working with generic reflection. It is spl
 * The map visualizing part
 
 
+### Reflection Acceptability
+
+- Is it acceptable to use reflection in runtime of the games?
+
+Reflexion can be usefull for extensibility, debugging and testing tools,
+but the performences cost is to expensive for a game
+
+- Would you use it at runtime?
+
+With this kind of usage ; never!
+
+ - Why would / would’t you use it in runtime?
+The performence overall is to expensive for a game runtime.
+Randering, inputs reading and gameplay loop would loose to much.
+But I could imagine using it at program initialization phase, or for code generation
+with, for exemple, usage of attributes for exemple.
+
+
 ## <a name='projectFeatures'>Project features</a>
 
 ### Mandatory
@@ -86,7 +104,7 @@ The Map Inspector is a map visualizer working with generic reflection. It is spl
   * Button loading a map and logs it using reflection 10000 times ✓
 
 
-* Reflexion Acceptability (1 point)
+* Reflection Acceptability (1 point)
   * Comment in code
     * Is it acceptable to use reflection in runtime of the games? ✓
     * Would you use it at runtime? ✓
