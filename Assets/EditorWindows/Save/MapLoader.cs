@@ -12,7 +12,7 @@ namespace EditorWindows.Save
         {
             try
             {
-                if (filePath is null or "")
+                if (filePath is null || filePath == "")
                 {
                     Debug.LogError("Invalid file path");
                     return null;

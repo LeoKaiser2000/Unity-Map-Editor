@@ -101,7 +101,7 @@ namespace EditorWindows
         private void LoadMap()
         {
             var filePath = EditorUtility.OpenFilePanel("Open map file", "", "json");
-            if (filePath is null or "")
+            if (filePath is null || filePath == "")
                 return;
             var serializedMap = MapLoader.LoadMap(filePath);
             if (serializedMap == null) return;
@@ -111,7 +111,7 @@ namespace EditorWindows
         private static void LoadAndLoadMapXTimes(int times)
         {
             var filePath = EditorUtility.OpenFilePanel("Open map file", "", "json");
-            if (filePath is null or "")
+            if (filePath is null || filePath == "")
                 return;
             Debug.Log("Starting stopwatch...");
             var stopWatch = new Stopwatch();

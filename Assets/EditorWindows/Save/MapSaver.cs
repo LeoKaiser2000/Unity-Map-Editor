@@ -13,7 +13,7 @@ namespace EditorWindows.Save
             {
                 var jsonData = JsonConvert.SerializeObject(map, Formatting.Indented);
                 var filePath = EditorUtility.SaveFilePanel("Save map file", "", map.name, "json");
-                if (filePath is null or "")
+                if (filePath is null || filePath == "")
                 {
                     Debug.LogError("Invalid file path");
                     return;
